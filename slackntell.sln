@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{8279BCCF-57A1-4FBF-8AEC-AD83B366145D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "slackntell", "source\slackntell\slackntell.csproj", "{5F7BB01F-0DEF-43C5-81F1-C804851E91D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "slackntell.Cli", "source\slackntell.Cli\slackntell.Cli.csproj", "{2729C00A-B2B6-4CF2-A430-E08DE0745EB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F7BB01F-0DEF-43C5-81F1-C804851E91D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F7BB01F-0DEF-43C5-81F1-C804851E91D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F7BB01F-0DEF-43C5-81F1-C804851E91D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F7BB01F-0DEF-43C5-81F1-C804851E91D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2729C00A-B2B6-4CF2-A430-E08DE0745EB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2729C00A-B2B6-4CF2-A430-E08DE0745EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2729C00A-B2B6-4CF2-A430-E08DE0745EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2729C00A-B2B6-4CF2-A430-E08DE0745EB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F7BB01F-0DEF-43C5-81F1-C804851E91D6} = {8279BCCF-57A1-4FBF-8AEC-AD83B366145D}
+		{2729C00A-B2B6-4CF2-A430-E08DE0745EB1} = {8279BCCF-57A1-4FBF-8AEC-AD83B366145D}
+	EndGlobalSection
+EndGlobal
