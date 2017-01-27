@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
@@ -24,10 +27,10 @@ namespace slackntell
             _To = to;
         }
 
-        public void Rat(string channel, string user, string message, string raw)
+        public void Rat(string context, string user, IEnumerable<Telling> tellings)
         {
             var _bodyBuilder = new BodyBuilder();
-            _bodyBuilder.TextBody = $"{message}\n\n\n\n{raw}";
+            _bodyBuilder.TextBody = string.Join("\n", tellings.Select(_telling => $"{_telling.Timestamp.ToString("HH:mm:ss", CultureInfo.InvariantCulture)} @{_telling.User}: {_telling.Message}"));
 
             var _mimeMessage = new MimeMessage();
             _mimeMessage.From.Add(new MailboxAddress(_From));
@@ -35,7 +38,7 @@ namespace slackntell
             _mimeMessage.Subject = string.Join(
                 " ",
                 "[slackntell]",
-                channel == null ? null : $"#{channel}",
+                context == null ? null : $"#{context}",
                 user == null ? null : $"@{user}");
             _mimeMessage.Body = _bodyBuilder.ToMessageBody();
 
